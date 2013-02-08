@@ -174,7 +174,7 @@ fbyte = %x01-08 / %x0B / %x0C / %x0E-FF
     <td>%{X-Runtime}o</td>
     <td>$upstream_http_runtime</td>
   </tr>
-</table>  
+</table>
 
 <p>A LogFormat example for Apache mod_log_config.</p>
 
@@ -230,6 +230,15 @@ The configuration is like this:</p>
 </ul>
 </li>
 </ul>
+
+<h3>Plack::Middleware::AxsLog</h3>
+
+<p>Plack::Middleware::AxsLog (<a href="https://metacpan.org/release/Plack-Middleware-AxsLog">https://metacpan.org/release/Plack-Middleware-AxsLog</a>) supports LTSV formart.
+The log format is like this:</p>
+
+<pre><code>host:%h<TAB>user:%u<TAB>time:%t<TAB>req:%r<TAB>status:%>s<TAB>size:%b<TAB>referer:%{Referer}i<TAB>ua:%{User-agent}i<TAB>taken:%D
+=> host:127.0.0.1<TAB>user:-<TAB>time:[23/Aug/2012:00:52:15 +0900]<TAB>req:GET / HTTP/1.1<TAB>status:200<TAB>size:645<TAB>"referer:-<TAB>ua:Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.79 Safari/537.1<TAB>taken:10941
+</code></pre>
 
       </section>
     </div>
